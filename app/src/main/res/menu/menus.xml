@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/mainScreen"
+        android:title="Asosiy"
+        android:icon="@drawable/ic_home"/>
+    <item
+        android:id="@+id/selectedScreen"
+        android:title="Tanlangan"
+        android:icon="@drawable/ic_favourite"/>
+    <item
+        android:id="@+id/menuScreen"
+        android:title="Menyu"
+        android:icon="@drawable/ic_food"/>
+    <item
+        android:id="@+id/restaurantScreen"
+        android:title="Restoranlar"
+        android:icon="@drawable/ic_location"/>
+    <item
+        android:id="@+id/profileScreen"
+        android:title="Profil"
+        android:icon="@drawable/ic_person"/>
+</menu>

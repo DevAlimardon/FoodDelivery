@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/container"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp">
+
+    <ImageView
+        android:id="@+id/ivItemImage"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <TextView
+        android:id="@+id/tvTextItem"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        app:layout_constraintTop_toBottomOf="@id/ivItemImage" />
+
+    <TextView
+        android:id="@+id/tvItemName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:gravity="center"
+        tools:text="Go`shtli lavash"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toTopOf="@id/tvTextItem" />
+
+    <TextView
+        android:id="@+id/tvItemCost"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:gravity="center"
+        tools:text="21 000 so`m"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@id/tvBasket" />
+
+    <TextView
+        android:id="@+id/tvBasket"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/bascet_background"
+        android:gravity="center"
+        android:padding="4dp"
+        android:visibility="invisible"
+        android:text="+ SAVATGA"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/tvTextItem" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/llItems"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_marginStart="16dp"
+        android:visibility="invisible"
+        android:layout_marginEnd="16dp"
+        android:weightSum="3"
+        android:padding="4dp"
+        android:orientation="horizontal"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="@id/tvTextItem">
+        <TextView
+            android:id="@+id/deleteItem"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginEnd="4dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="-"
+            android:textSize="16sp"
+            android:background="@drawable/delete_background"/>
+        <TextView
+            android:id="@+id/countItem"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="1x"
+            android:textSize="14sp"/>
+        <TextView
+            android:id="@+id/addItem"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginStart="4dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="+"
+            android:textSize="16sp"
+            android:background="@drawable/bascet_background"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

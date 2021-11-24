@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_nav"
+    app:startDestination="@id/mainScreen">
+
+    <fragment
+        android:id="@+id/mainScreen"
+        android:name="com.example.fooddelivery.presenter.screens.MainScreen"
+        android:label="screen_main"
+        tools:layout="@layout/screen_main" />
+    <fragment
+        android:id="@+id/menuScreen"
+        android:name="com.example.fooddelivery.presenter.screens.MenuScreen"
+        android:label="screen_menu"
+        tools:layout="@layout/screen_menu" >
+        <action
+            android:id="@+id/action_menuScreen_to_infoScreen"
+            app:destination="@id/infoScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/selectedScreen"
+        android:name="com.example.fooddelivery.presenter.screens.SelectedScreen"
+        android:label="screen_selected"
+        tools:layout="@layout/screen_selected" />
+    <fragment
+        android:id="@+id/restaurantScreen"
+        android:name="com.example.fooddelivery.presenter.screens.RestaurantScreen"
+        android:label="screen_resturant"
+        tools:layout="@layout/screen_resturant" >
+        <action
+            android:id="@+id/action_restaurantScreen_to_mapFragment"
+            app:destination="@id/mapFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileScreen"
+        android:name="com.example.fooddelivery.presenter.screens.ProfileScreen"
+        android:label="screen_profile"
+        tools:layout="@layout/screen_profile" />
+    <fragment
+        android:id="@+id/infoScreen"
+        android:name="com.example.fooddelivery.presenter.screens.InfoScreen"
+        android:label="screen_info"
+        tools:layout="@layout/screen_info" />
+    <fragment
+        android:id="@+id/mapFragment"
+        android:name="com.example.fooddelivery.presenter.screens.MapFragment"
+        android:label="MapFragment" />
+
+</navigation>
